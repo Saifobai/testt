@@ -2,11 +2,43 @@
 
 .counter{
 
+    width: 30%;
+    height:350px;
+
     border: 1px solid;
     margin: 200px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(107, 107, 107);
+}
+
+.counter span{
+
+    background-color:rgb(231, 215, 195);
+    width: 10%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 15px;
+    font-size: 17px;
+    border-radius: 6px;
+    
 }
 
 .counter button{
 
     margin: 0 10px;
+    padding:10px 30px;
+    font-size:18px;
+    background-color: rgb(231, 215, 195);
+    border-radius: 6px;
+
+}
+.counter button:hover,
+.counter span:hover
+{
+
+    background-color:lightblue;
+    transition: all 1s ease-in-out;
 }

@@ -4,7 +4,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 
-import { decrement, increment, selectCount } from './counterSlice';
+import { decrement, increment, selectCount, reset, addfive , decreasefive} from './counterSlice';
 import './counter.css'
 
 function Counter() {
@@ -35,16 +35,21 @@ function Counter() {
             </div>
             <div className="count-five">
                 <button
-                    onClick={() => dispatch(increment())}
+                    onClick={() => dispatch(addfive())}
                 >
                     +5
                 </button>
 
                 <button
-                    onClick={() => dispatch(decrement())}
+                    onClick={() => dispatch(decreasefive())}
                 >
                     -5
                 </button>
+
+
+            </div>
+            <div>
+                <button onClick={() => dispatch(reset())}>Reset</button>
             </div>
 
         </div>

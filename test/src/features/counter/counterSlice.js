@@ -15,10 +15,21 @@ export const slice = createSlice ({
         decrement: state => {
             state.value -= 1;
         },  
+
+        reset: state => {
+            state.value = 0;
+        },
+
+        addfive: state => {
+            state.value += 5;
+        },
+        decreasefive: state => {
+            state.value -= 5;
+        }
     },  
 });
 
-export const{ increment, decrement} = slice.actions;
+export const{ increment, decrement, reset, addfive, decreasefive} = slice.actions;
 
 export const selectCount = state => state.counter.value;
 
